@@ -498,6 +498,14 @@ presence.on("UpdateData", async () => {
 				break;
 			}
 			case pathname.includes("/playables"): {
+				if (pathname.includes("/playables/")) {
+					presenceData.details = strings.playable;
+					presenceData.state = document.title.substring(
+						0,
+						document.title.lastIndexOf(" - YouTube")
+					);
+					break;
+				}
 				presenceData.details = strings.browsingThrough;
 				presenceData.state = "Playables";
 				break;
