@@ -504,6 +504,10 @@ presence.on("UpdateData", async () => {
 						0,
 						document.title.lastIndexOf(" - YouTube")
 					);
+					const gameIconElement = document.querySelector<HTMLImageElement>(
+						".mini-app-game-info-dialog-view-model-wiz__game-image-wrapper img"
+					);
+					presenceData.largeImageKey = gameIconElement?.src.replace(/=s\d+/, "=s512");
 					break;
 				}
 				presenceData.details = strings.browsingThrough;
