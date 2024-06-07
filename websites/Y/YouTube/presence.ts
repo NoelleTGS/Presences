@@ -453,6 +453,7 @@ presence.on("UpdateData", async () => {
 				break;
 			}
 			case pathname.includes("/gaming"): {
+
 				presenceData.details = strings.browsingThrough;
 				presenceData.state = "Youtube Gaming";
 				presenceData.smallImageKey = Assets.Reading;
@@ -494,6 +495,11 @@ presence.on("UpdateData", async () => {
 			}
 			case pathname.includes("/audiolibrary"): {
 				presenceData.details = strings.viewAudio;
+				break;
+			}
+			case pathname.includes("/playables"): {
+				presenceData.details = strings.browsingThrough;
+				presenceData.state = "Playables";
 				break;
 			}
 		}
